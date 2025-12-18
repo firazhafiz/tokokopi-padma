@@ -1,0 +1,350 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Toko Kopi Padma - Warm Terracotta Theme */
+    --background: 35 30% 97%;
+    --foreground: 20 25% 12%;
+
+    --card: 35 25% 99%;
+    --card-foreground: 20 25% 12%;
+
+    --popover: 35 25% 99%;
+    --popover-foreground: 20 25% 12%;
+
+    /* Primary - Terracotta #A33F27 */
+    --primary: 12 61% 40%;
+    --primary-foreground: 35 40% 98%;
+
+    /* Secondary - Warm Cream */
+    --secondary: 35 35% 93%;
+    --secondary-foreground: 20 25% 15%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 20 15% 40%;
+
+    /* Accent - Deep Coffee Brown (dark background) */
+    --accent: 20 40% 15%;
+    --accent-foreground: 35 30% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 12 61% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom Colors */
+    --coffee-dark: 20 35% 10%;
+    --coffee-medium: 20 30% 25%;
+    --cream: 38 45% 96%;
+    --cream-dark: 35 30% 90%;
+    --terracotta-light: 12 50% 60%;
+
+    /* Hero specific - ensures good contrast on dark overlay */
+    --hero-bg: 20 40% 15%;
+    --hero-text: 35 30% 95%;
+    --hero-text-muted: 35 25% 75%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(12 61% 40%) 0%, hsl(20 40% 25%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(35 25% 99%) 0%, hsl(35 30% 96%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(35 30% 97%) 0%, hsl(35 25% 94%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(20 35% 10% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(20 35% 10% / 0.12);
+    --shadow-lg: 0 16px 48px -16px hsl(20 35% 10% / 0.16);
+    --shadow-card: 0 4px 20px -4px hsl(20 35% 10% / 0.08);
+    --shadow-card-hover: 0 12px 32px -8px hsl(20 35% 10% / 0.15);
+    --shadow-glow: 0 0 30px hsl(12 61% 40% / 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 35 30% 97%;
+    --sidebar-foreground: 20 25% 12%;
+    --sidebar-primary: 12 61% 40%;
+    --sidebar-primary-foreground: 35 40% 98%;
+    --sidebar-accent: 35 35% 93%;
+    --sidebar-accent-foreground: 20 25% 15%;
+    --sidebar-border: 35 25% 88%;
+    --sidebar-ring: 12 61% 40%;
+  }
+
+  .dark {
+    --background: 20 30% 6%;
+    --foreground: 35 25% 95%;
+
+    --card: 20 28% 10%;
+    --card-foreground: 35 25% 95%;
+
+    --popover: 20 28% 10%;
+    --popover-foreground: 35 25% 95%;
+
+    /* Primary - Lighter Terracotta for dark mode */
+    --primary: 12 55% 55%;
+    --primary-foreground: 20 30% 8%;
+
+    /* Secondary */
+    --secondary: 20 25% 15%;
+    --secondary-foreground: 35 25% 90%;
+
+    --muted: 20 22% 14%;
+    --muted-foreground: 35 20% 60%;
+
+    /* Accent - Lighter for dark mode */
+    --accent: 20 30% 20%;
+    --accent-foreground: 35 30% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 22% 18%;
+    --input: 20 22% 18%;
+    --ring: 12 55% 55%;
+
+    /* Custom Colors Dark */
+    --coffee-dark: 35 25% 95%;
+    --coffee-medium: 35 22% 75%;
+    --cream: 20 25% 12%;
+    --cream-dark: 20 22% 10%;
+    --terracotta-light: 12 50% 65%;
+
+    /* Hero specific dark */
+    --hero-bg: 20 35% 8%;
+    --hero-text: 35 30% 95%;
+    --hero-text-muted: 35 20% 70%;
+
+    /* Gradients Dark */
+    --gradient-hero: linear-gradient(135deg, hsl(12 55% 55%) 0%, hsl(20 35% 30%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(20 28% 10%) 0%, hsl(20 25% 8%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(20 30% 6%) 0%, hsl(20 28% 4%) 100%);
+
+    /* Shadows Dark */
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 16px 48px -16px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 12px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(12 55% 55% / 0.25);
+
+    /* Sidebar Dark */
+    --sidebar-background: 20 30% 6%;
+    --sidebar-foreground: 35 25% 95%;
+    --sidebar-primary: 12 55% 55%;
+    --sidebar-primary-foreground: 20 30% 8%;
+    --sidebar-accent: 20 25% 15%;
+    --sidebar-accent-foreground: 35 25% 90%;
+    --sidebar-border: 20 22% 18%;
+    --sidebar-ring: 12 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-padma {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .card-seamless {
+    @apply bg-card rounded-2xl border border-border/50 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-seamless:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply -translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  /* Hero specific classes for guaranteed contrast */
+  .hero-section {
+    --hero-overlay: hsl(20 40% 12% / 0.85);
+  }
+
+  .hero-text-primary {
+    color: hsl(var(--hero-text));
+  }
+
+  .hero-text-muted {
+    color: hsl(var(--hero-text-muted));
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Selection */
+::selection {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--foreground));
+}
