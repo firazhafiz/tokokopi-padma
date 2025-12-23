@@ -44,7 +44,7 @@ export function HeroSection() {
             </h1>
 
             {/* Description */}
-            <p className="text-cream/80 text-lg md:text-xl leading-relaxed mb-10 max-w-xl animate-fade-in-up animation-delay-200">
+            <p className="text-cream/80 text-lg md:text-xl font-extralight leading-relaxed mb-10 max-w-xl animate-fade-in-up animation-delay-200">
               Setiap cangkir adalah perjalanan rasa. Toko Kopi Padma menghadirkan
               pengalaman kopi specialty dengan biji pilihan dari seluruh Nusantara.
             </p>
